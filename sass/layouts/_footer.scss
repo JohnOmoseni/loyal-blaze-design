@@ -1,0 +1,69 @@
+@use '../abstracts/' as *;
+
+footer {
+   @include flex-column();
+   gap: $pad-200;
+   padding: $pad-400 0;
+   place-items: center;
+   justify-items: end;
+
+   .column:first-of-type {
+      @include flex-row();
+      text-align: center;
+      gap: 4px;
+
+      .home-icon {
+         display: none;
+      }
+   }
+
+   .icon {
+      align-self: start;
+      margin-top: 2px;
+
+   }
+
+   .column:last-of-type {
+      position: relative;
+
+      .mobile-no {
+         @include flex-row();
+         gap: $pad-100;
+      }
+
+      &::before {
+         position: absolute;
+      }
+   }
+}
+
+@mixin footer-laptop() {
+   footer {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: $pad-300;
+
+      .column:first-of-type {
+         gap: $pad-100;
+         text-align: left;
+
+         .home-icon {
+            display: inline-block;
+         }
+
+      }
+
+      .column:last-of-type {
+         &::before {
+            content: '';
+            position: absolute;
+            background: var(--clr-text-main);
+            top: -16px;
+            left: -20%;
+            width: 120%;
+            height: 1px;
+            box-shadow: $bs-100;
+         }
+      }
+   }
+}

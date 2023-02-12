@@ -1,0 +1,76 @@
+@use '../abstracts/' as *;
+
+.swal2-container {
+  .swal2-popup {
+    background: #070707;
+    padding: 2em;
+  }
+
+  .swal2-icon {
+    border-color: transparent;
+
+    .swal2-success-line-long,
+    .swal2-success-line-tip {
+      background: white;
+      height: 0.3925em !important;
+      // animation: none !important;
+    }
+
+    .swal2-success-line-tip {
+      top: 3.275em !important;
+      left: -0.2125em !important;
+    }
+
+    .swal2-success-line-long {
+      top: 2.875em !important;
+      right: 1.5em !important;
+    }
+
+    .swal2-success-circular-line-left,
+    .swal2-success-circular-line-right {
+      background: rgb(0, 205, 92) !important;
+
+    }
+
+    .swal2-success-circular-line-left {
+      top: -0.6975em !important;
+      left: -2.075em !important;
+      transform-origin: 3.75em 3.75em !important;
+    }
+
+    .swal2-success-circular-line-right {
+      top: -0.575em !important;
+      left: 1.5em !important;
+      transform-origin: 0 3.6em !important;
+      animation: none !important;
+    }
+
+
+    .swal2-success-ring {
+      border: none;
+    }
+
+    .swal2-success-fix {
+      display: none;
+
+    }
+  }
+
+  .swal2-title {
+    margin-top: $pad-300;
+    color: white;
+    font-size: $fs-500;
+    text-shadow: $ts-100;
+  }
+
+  .swal2-html-container {
+    margin: $pad-100 0 $pad-300;
+    color: rgba(170, 170, 170, 0.697);
+  }
+
+  .swal2-actions .swal2-confirm {
+    background: var(--text-clr-variant-200);
+    letter-spacing: 1px;
+    outline: none;
+  }
+}

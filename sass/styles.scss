@@ -1,0 +1,11 @@
+@use './base/' as *;
+@use './components/modal' as *;
+
+@use './layouts/header' as *;
+@use './layouts/main' as *;
+@use './layouts/footer' as *;
+
+
+@media screen and (min-width: 600px) {
+   @include footer-laptop();
+}

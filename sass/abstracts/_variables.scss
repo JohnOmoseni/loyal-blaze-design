@@ -1,0 +1,48 @@
+// Border-Radius
+$br-light: 6px;
+$br-regular: 1em;
+$br-btn: 100vmax;
+$br-round: 50%;
+
+// Transition
+$transition: 0.2s linear;
+
+// Backdrop-Filter
+$backdrop: blur(1em);
+
+// Padding
+$pad-100: 0.5em;
+$pad-150: 0.65em;
+$pad-200: 0.8em;
+$pad-300: 1em;
+$pad-400: 1.2em;
+$pad-500: 1.5em;
+$pad-500: 2em;
+$pad-600: 3em;
+$pad-700: 4.5em;
+
+// Stacking
+$z-index-200: 20;
+$z-index-300: 30;
+$z-index-400: 40;
+$z-index-overlay: 100;
+
+// Letter-spacing 
+$ls-100: 1px;
+$ls-200: 2px;
+
+// Text Shadow 
+$ts-100: 0px 1px 2px rgba(black, 0.4);
+$ts-200: 1px 2px 5px rgba(black, 0.5);
+
+// Box-Shadow
+$bs-header: 0px 3px 10px rgba(black, 0.3);
+$bs-100: 0px 3px 10px rgba(black, 0.4);
+$bs-200: 2px 2px 6px rgba(black, 0.8),
+  inset -2px -2px 6px rgba(black, 0.4),
+  inset 1px 1px 5px rgba(white, 0.2);
+$bs-300: 2px 3px 10px rgba(black, 0.4),
+  inset -2px -2px 15px rgba(#333, 0.6),
+  inset 1px 1px 10px rgba(white, 0.2);
+
+$bs-form: 2px 3px 15px rgba(black, 0.3);

@@ -1,0 +1,133 @@
+@use '../abstracts/' as *;
+
+.section-2 {
+   @include flex-column();
+   position: relative;
+
+   .star-variant {
+      position: absolute;
+
+      &-01 {
+         top: 0;
+         left: 15%;
+      }
+
+      &-02 {
+         top: -40px;
+         right: 5%;
+      }
+   }
+
+   .column1 {
+      margin-top: 25%;
+
+      h2 {
+         color: var(--clr-white);
+         text-align: center;
+         position: relative;
+         font-family: $ff-header;
+
+         .scribble {
+            position: absolute;
+            top: 60%;
+            left: 42%;
+         }
+      }
+
+      p.summary {
+         margin: 5em 0 $pad-300;
+         text-align: center;
+      }
+   }
+
+   form {
+      background: var(--clr-form-bg);
+      padding: 2.3em $pad-400;
+      border-radius: $br-light;
+      box-shadow: $bs-form;
+      position: relative;
+
+
+
+      h3 {
+         padding-bottom: $pad-200;
+         color: var(--clr-white);
+         letter-spacing: $ls-100;
+      }
+
+      .form-group {
+         position: relative;
+
+         .icon {
+            position: absolute;
+            top: 50%;
+            right: $pad-150;
+            transform: translateY(-50%);
+         }
+      }
+
+      input,
+      textarea {
+         border: 1px solid #666666b1;
+         margin: $pad-200 0;
+      }
+
+      ::placeholder {
+         font-size: $fs-small-text;
+      }
+
+
+      textarea {
+         resize: none;
+         width: 100% !important;
+      }
+
+      button {
+         width: 100%;
+         padding: $pad-200;
+         margin: $pad-200 0;
+         background: var(--bg-gradient-100);
+         box-shadow: $bs-300;
+      }
+   }
+}
+
+
+@media screen and (min-width: 600px) {
+   .section-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $pad-500;
+      margin: 7em 0 2em;
+
+      .star-variant {
+
+         &-01 {
+            top: 0;
+            left: 45%;
+         }
+      }
+
+      .column1 {
+         margin-top: 30%;
+
+         h2 {
+            text-align: left;
+
+            .scribble {
+               left: 60px;
+            }
+         }
+
+         p.summary {
+            text-align: left;
+         }
+      }
+
+      form {
+         background: var(--clr-form-bg);
+         padding: 2.3em 2.5em;
+      }
+
+   }
+}

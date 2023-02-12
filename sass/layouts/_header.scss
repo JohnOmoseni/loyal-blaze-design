@@ -1,0 +1,40 @@
+@use '../abstracts/' as *;
+
+
+header {
+   @include flex-row($justify: space-between);
+
+   width: 100%;
+   padding: $pad-300 5%;
+   position: sticky;
+   top: 0;
+   backdrop-filter: $backdrop;
+   -webkit-backdrop-filter: $backdrop;
+   z-index: $z-index-300;
+   box-shadow: $bs-header;
+
+   .logo,
+   span {
+      font-size: $fs-400;
+      color: var(--clr-white);
+      cursor: pointer;
+   }
+
+   .logo {
+
+      .variant {
+         fill: darkviolet;
+      }
+   }
+
+   .request-call {
+      border-radius: $br-btn;
+      padding: $pad-100 $pad-400;
+      font-size: $fs-small-text;
+      box-shadow: inset -1px -1px 0px rgba(#ec07a7, 0.2),
+         inset 2px 2px 0px rgba(41, 4, 67, 0.5),
+         inset -2px -2px 0px rgba(41, 4, 67, 0.5),
+         4px 4px 8px rgba(black, 0.6);
+      cursor: pointer;
+   }
+}

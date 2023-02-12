@@ -1,0 +1,112 @@
+@use '../abstracts/' as *;
+
+.banner {
+   display: grid;
+   place-items: center;
+   text-align: center;
+   max-width: 600px;
+   margin: $pad-500 auto;
+   position: relative;
+
+   .arrow {
+      display: none;
+   }
+
+   .banner-title {
+      font-weight: $fw-bold;
+      line-height: 1.2;
+      color: var(--clr-white);
+      font-family: $ff-header;
+
+      span {
+         font-size: inherit;
+         font-weight: inherit;
+         font-family: inherit;
+         color: var(--clr-pink-100)
+      }
+   }
+
+   .subtitle {
+      margin: $pad-300 0 $pad-500;
+   }
+
+   form {
+      width: min(100%, 300px);
+
+      .form-group {
+         margin: $pad-300 0;
+         position: relative;
+
+         .icon {
+            position: absolute;
+            top: 50%;
+            left: $pad-150;
+            transform: translateY(-42%);
+            vertical-align: middle;
+            margin-top: 1px;
+         }
+
+         input {
+            border: 1px solid #999;
+            padding-left: 2.3em;
+
+            &::placeholder {
+               color: #aaa;
+            }
+         }
+      }
+
+      .banner-btn {
+         width: min(100%, 300px);
+         padding: $pad-100;
+         margin: $pad-100 0;
+         background: var(--bg-gradient-100);
+         box-shadow: $bs-300;
+      }
+   }
+
+   .overlay {
+      margin: $pad-300 0;
+      width: min(100%, 300px);
+      position: relative;
+      z-index: 1;
+
+      .letter {
+         width: 2em;
+         height: 2em;
+         font-weight: $fw-bold;
+         text-align: center;
+         background: var(--clr-blue);
+         margin-left: -3px;
+         position: relative;
+         border-radius: $br-btn;
+         box-shadow: $bs-200;
+         line-height: 2;
+
+         &:nth-child(even) {
+            background: var(--clr-pink-200);
+            z-index: -3;
+            line-height: 2.2;
+         }
+
+      }
+
+      .text {
+         margin-left: 8px;
+         color: var(--clr-white)
+      }
+
+   }
+
+}
+
+@media screen and (min-width: 600px) {
+   .banner {
+      .arrow {
+         position: absolute;
+         bottom: 40%;
+         right: 10%;
+         display: block;
+      }
+   }
+}
